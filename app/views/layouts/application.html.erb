@@ -9,8 +9,8 @@
 <body>
   <div id="user-widget">
     <% if current_user %>
-      <h1>Welcome <%= current_user.name %>!</h1>
-      <%= link_to 'Sign out', signout_path id: "sign_out" %>
+      <h1>Welcome <%= current_user.first_name %>!</h1>
+      <%= link_to 'Sign out', signout_path, id: "sign_out" %>
     <% else %>
       <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
     <% end %>
@@ -20,3 +20,4 @@
 
 </body>
 </html>
+
